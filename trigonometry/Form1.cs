@@ -16,5 +16,36 @@ namespace trigonometry
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double a = double.Parse(textBox1.Text);
+                double ans = sin(a);
+                label1.Text = ans.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("wrong box idiot");
+            }
+        }
+
+        double sin(double a)
+        {
+            double rad = a / 180.0 * Math.PI;
+            return Math.Sin(rad);
+
+           
+
+
+        }
+        double inversesin(double a)
+        {
+            return Math.Asin(a) * 180.0 / Math.PI;
+        }
+           
+    
     }
+
 }
